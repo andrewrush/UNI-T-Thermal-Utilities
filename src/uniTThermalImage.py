@@ -189,7 +189,7 @@ class UniTThermalImage:
             for idx_h in range(len(export_temp_np)):
                 temp_list = []
                 for idx_w in range(len(export_temp_np[idx_h])):
-                    temp_list.append(export_temp_np[idx_h, idx_w])
+                    temp_list.append(round(export_temp_np[idx_h, idx_w], 1))
                 file.write(self.__csv_str_line_formatter(temp_list, delimiter, decimal_sep))
 
     def export_bmp(self, export_fix=True):
